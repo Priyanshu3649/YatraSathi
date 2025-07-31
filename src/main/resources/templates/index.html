@@ -1,0 +1,22 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>YatraSathi Dashboard</title>
+</head>
+<body>
+<h1>Welcome to YatraSathi 🚍</h1>
+
+<nav>
+    <ul>
+        <li th:each="item : ${menuItems}">
+            <a th:href="@{/${item.ol_code}}" th:text="${item.ol_olshort}">Menu</a>
+        </li>
+    </ul>
+</nav>
+
+<div>
+    <p>Select a module from the menu above.</p>
+</div>
+</body>
+</html>
